@@ -321,8 +321,16 @@ body { font-family: var(--sans); color: var(--navy); background: var(--cream); o
 .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
 .context-bullets { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
-.context-bullet { display: flex; gap: 14px; font-size: 14px; color: rgba(27,48,85,.7); font-weight: 300; align-items: flex-start; }
-.context-bullet::before { content: ''; width: 16px; height: 1px; background: var(--gold); margin-top: 9px; flex-shrink: 0; }
+.context-bullet {
+  display: flex; gap: 14px; font-size: 14px;
+  color: #1B3055 !important; font-weight: 400;
+  align-items: flex-start; line-height: 1.55;
+}
+.context-bullet::before {
+  content: ''; width: 16px; height: 2px;
+  background: #B8902A; margin-top: 9px; flex-shrink: 0;
+  display: block;
+}
 
 @media(max-width:1100px) {
   .professions-grid { grid-template-columns: 1fr 1fr; }
@@ -472,11 +480,11 @@ body { font-family: var(--sans); color: var(--navy); background: var(--cream); o
       <p style="font-size:15px;color:rgba(27,48,85,.6);line-height:1.8;font-weight:300;margin-bottom:12px;">Fill out the form — or simply call or email us. Either way, we'll reach out to your client within one business day, introduce ourselves professionally, and make sure they know you sent them to someone they can trust.</p>
       <p style="font-size:15px;color:rgba(27,48,85,.6);line-height:1.8;font-weight:300;margin-bottom:0;">You don't need to know whether they're ready to sell. Many of the best referrals are owners who are simply <strong style="color:var(--navy);font-weight:500">curious about what their business is worth.</strong></p>
       <div class="context-bullets">
-        <div class="context-bullet">No obligation for your client — ever</div>
-        <div class="context-bullet">Confidential from the very first conversation</div>
-        <div class="context-bullet">You can stay as involved or uninvolved as you prefer</div>
-        <div class="context-bullet">Your referral relationship is respected and protected</div>
-        <div class="context-bullet">Response within one business day</div>
+        <div class="context-bullet" style="color:#1B3055;font-weight:400;">No obligation for your client — ever</div>
+        <div class="context-bullet" style="color:#1B3055;font-weight:400;">Confidential from the very first conversation</div>
+        <div class="context-bullet" style="color:#1B3055;font-weight:400;">You can stay as involved or uninvolved as you prefer</div>
+        <div class="context-bullet" style="color:#1B3055;font-weight:400;">Your referral relationship is respected and protected</div>
+        <div class="context-bullet" style="color:#1B3055;font-weight:400;">Response within one business day</div>
       </div>
     </div>
     <div class="form-card">
@@ -517,9 +525,9 @@ body { font-family: var(--sans); color: var(--navy); background: var(--cream); o
   <div class="cta-strip-text">
     <p class="eye">Prefer to talk first?</p>
     <h2>Call or email us directly.<br>No form required.</h2>
-    <p>info@countysouth.biz &middot; 303 Indian Trail Rd. S, Indian Trail, NC 28079</p>
+    <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3e575058517e5d514b504a474d514b4a56105c5744">[email&#160;protected]</a> &middot; 303 Indian Trail Rd. S, Indian Trail, NC 28079</p>
   </div>
-  <a href="mailto:info@countysouth.biz" class="btn-navy" style="white-space:nowrap;flex-shrink:0;">Email Us Directly</a>
+  <a href="/cdn-cgi/l/email-protection#670e0901082704081209131e140812130f49050e1d" class="btn-navy" style="white-space:nowrap;flex-shrink:0;">Email Us Directly</a>
 </div>
 
 <footer class="site-footer">
@@ -555,16 +563,5 @@ body { font-family: var(--sans); color: var(--navy); background: var(--cream); o
       <ul class="footer-links">
         <li><a href="#">303 Indian Trail Rd. S</a></li>
         <li><a href="#">Indian Trail, NC 28079</a></li>
-        <li><a href="mailto:info@countysouth.biz">info@countysouth.biz</a></li>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p class="footer-copy">&copy; 2026 County South Business Brokers. All rights reserved.</p>
-    <p class="footer-tag">Est. 1989</p>
-  </div>
-</footer>
-</body>
-</html>
+        <li><a href="/cdn-cgi/l/email-protection#e68f888089a685899388929f958993928ec8848f9c"><span class="__cf_email__" data-cfemail="f29b9c949db2919d879c868b819d87869adc909b88">[email&#160;protected]</span></a></li>
+        <li><
