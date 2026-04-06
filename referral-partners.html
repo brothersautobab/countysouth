@@ -320,17 +320,7 @@ body { font-family: var(--sans); color: var(--navy); background: var(--cream); o
 .ftextarea { height: 100px; resize: none; line-height: 1.65; }
 .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 
-.context-bullets { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
-.context-bullet {
-  display: flex; gap: 14px; font-size: 14px;
-  color: #1B3055 !important; font-weight: 400;
-  align-items: flex-start; line-height: 1.55;
-}
-.context-bullet::before {
-  content: ''; width: 16px; height: 2px;
-  background: #B8902A; margin-top: 9px; flex-shrink: 0;
-  display: block;
-}
+/* context-bullet styles removed — using inline trigger pattern */
 
 @media(max-width:1100px) {
   .professions-grid { grid-template-columns: 1fr 1fr; }
@@ -479,12 +469,16 @@ body { font-family: var(--sans); color: var(--navy); background: var(--cream); o
       <h2 class="section-title" style="margin-bottom:16px;">Refer a client.<br><em>We'll take it from here.</em></h2>
       <p style="font-size:15px;color:rgba(27,48,85,.6);line-height:1.8;font-weight:300;margin-bottom:12px;">Fill out the form — or simply call or email us. Either way, we'll reach out to your client within one business day, introduce ourselves professionally, and make sure they know you sent them to someone they can trust.</p>
       <p style="font-size:15px;color:rgba(27,48,85,.6);line-height:1.8;font-weight:300;margin-bottom:0;">You don't need to know whether they're ready to sell. Many of the best referrals are owners who are simply <strong style="color:var(--navy);font-weight:500">curious about what their business is worth.</strong></p>
-      <div class="context-bullets">
-        <div class="context-bullet" style="color:#1B3055;font-weight:400;">No obligation for your client — ever</div>
-        <div class="context-bullet" style="color:#1B3055;font-weight:400;">Confidential from the very first conversation</div>
-        <div class="context-bullet" style="color:#1B3055;font-weight:400;">You can stay as involved or uninvolved as you prefer</div>
-        <div class="context-bullet" style="color:#1B3055;font-weight:400;">Your referral relationship is respected and protected</div>
-        <div class="context-bullet" style="color:#1B3055;font-weight:400;">Response within one business day</div>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:40px;">
+      <div style="display:flex;align-items:center;gap:14px;font-size:14px;color:rgba(255,255,255,.82);font-weight:300;"><div style="width:28px;height:28px;border-radius:50%;background:rgba(184,144,42,.12);border:1px solid rgba(184,144,42,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#B8902A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>No obligation for your client — ever</div>
+      <div style="display:flex;align-items:center;gap:14px;font-size:14px;color:rgba(255,255,255,.82);font-weight:300;"><div style="width:28px;height:28px;border-radius:50%;background:rgba(184,144,42,.12);border:1px solid rgba(184,144,42,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#B8902A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Confidential from the very first conversation</div>
+      <div style="display:flex;align-items:center;gap:14px;font-size:14px;color:rgba(255,255,255,.82);font-weight:300;"><div style="width:28px;height:28px;border-radius:50%;background:rgba(184,144,42,.12);border:1px solid rgba(184,144,42,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#B8902A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>You can stay as involved or uninvolved as you prefer</div>
+      <div style="display:flex;align-items:center;gap:14px;font-size:14px;color:rgba(255,255,255,.82);font-weight:300;"><div style="width:28px;height:28px;border-radius:50%;background:rgba(184,144,42,.12);border:1px solid rgba(184,144,42,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#B8902A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Your referral relationship is respected and protected</div>
+      <div style="display:flex;align-items:center;gap:14px;font-size:14px;color:rgba(255,255,255,.82);font-weight:300;"><div style="width:28px;height:28px;border-radius:50%;background:rgba(184,144,42,.12);border:1px solid rgba(184,144,42,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#B8902A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Response within one business day</div>
+    </div>
+        <div style="display:flex;align-items:center;gap:14px;font-size:14px;color:#1B3055;font-weight:400;"><div style="width:26px;height:26px;border-radius:50%;background:rgba(27,48,85,.08);border:1px solid rgba(27,48,85,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#B8902A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>You can stay as involved or uninvolved as you prefer</div>
+        <div style="display:flex;align-items:center;gap:14px;font-size:14px;color:#1B3055;font-weight:400;"><div style="width:26px;height:26px;border-radius:50%;background:rgba(27,48,85,.08);border:1px solid rgba(27,48,85,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#B8902A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Your referral relationship is respected and protected</div>
+        <div style="display:flex;align-items:center;gap:14px;font-size:14px;color:#1B3055;font-weight:400;"><div style="width:26px;height:26px;border-radius:50%;background:rgba(27,48,85,.08);border:1px solid rgba(27,48,85,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#B8902A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Response within one business day</div>
       </div>
     </div>
     <div class="form-card">
