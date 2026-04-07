@@ -145,63 +145,6 @@ body { font-family: var(--sans); color: var(--navy); background: var(--cream); o
 .trust-num { font-family: var(--serif); font-size: 30px; font-weight: 600; color: var(--navy); line-height: 1; }
 .trust-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.09em; color: rgba(27,48,85,0.62); font-weight: 500; margin-top: 5px; }
 
-/* ── HERO PATTERN ── */
-.hero {
-  background: var(--navy); min-height: 100vh;
-  display: grid; grid-template-columns: 1fr 520px;
-  align-items: stretch; padding-top: var(--nav-h);
-  position: relative; overflow: hidden;
-}
-.hero-grid {
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
-  background-size: 52px 52px; pointer-events: none;
-}
-.hero-glow {
-  position: absolute; top: -80px; left: -80px; width: 600px; height: 600px;
-  background: radial-gradient(circle, rgba(184,144,42,0.09) 0%, transparent 65%);
-  pointer-events: none;
-}
-.hero-left {
-  padding: 72px 64px; display: flex; flex-direction: column;
-  justify-content: center; position: relative; z-index: 2;
-}
-.hero-eyebrow {
-  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--gold); font-weight: 500; margin-bottom: 22px;
-  display: flex; align-items: center; gap: 12px;
-}
-.hero-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
-.hero-h1 {
-  font-family: var(--serif); font-size: clamp(42px,4.5vw,68px);
-  font-weight: 500; color: var(--white); line-height: 1.07;
-  letter-spacing: -0.01em; margin-bottom: 20px;
-}
-.hero-h1 em { font-style: italic; color: var(--gold); }
-.hero-p {
-  font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.8;
-  font-weight: 300; max-width: 500px; margin-bottom: 36px;
-}
-.hero-p strong { color: rgba(255,255,255,0.88); font-weight: 500; }
-.hero-right {
-  background: var(--cream); border-left: 1px solid rgba(184,144,42,0.15);
-  display: flex; flex-direction: column; justify-content: center;
-  padding: 48px 40px; position: relative; z-index: 2; overflow-y: auto;
-}
-.hero-logo-wrap {
-  text-align: center; padding-bottom: 24px;
-  border-bottom: 1px solid rgba(27,48,85,0.08); margin-bottom: 24px;
-}
-.hero-logo-wrap img {
-  width: 360px; max-width: 92%; height: auto; display: inline-block;
-}
-.hero-logo-wrap p {
-  font-family: var(--serif); font-size: 13px; font-style: italic;
-  color: rgba(27,48,85,0.4); margin-top: 8px; letter-spacing: 0.04em;
-}
-
 /* ── TESTIMONIAL CARDS ── */
 .testimonial-card {
   background: var(--white); border: 1px solid var(--card-border);
@@ -252,9 +195,6 @@ body { font-family: var(--sans); color: var(--navy); background: var(--cream); o
 @media(max-width:1100px) {
   .site-nav { padding: 0 28px; }
   .section { padding: 72px 40px; }
-  .hero { grid-template-columns: 1fr; }
-  .hero-right { display: none; }
-  .hero-left { padding: 60px 40px; }
   .cta-strip { flex-direction: column; align-items: flex-start; padding: 56px 40px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
@@ -264,7 +204,6 @@ body { font-family: var(--sans); color: var(--navy); background: var(--cream); o
   .nav-wordmark { font-size: 17px; }
   .nav-links { display: none; }
   .section { padding: 56px 20px; }
-  .hero-left { padding: 48px 20px; }
   .cta-strip { padding: 48px 20px; }
   .site-footer { padding: 40px 20px 28px; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
@@ -352,6 +291,74 @@ body { font-family: var(--sans); color: var(--navy); background: var(--cream); o
 }
 @media(max-width:768px) {
   .score-grid, .pages-grid { grid-template-columns: 1fr; }
+}
+
+/* ══ HERO — shared across all pages ══ */
+.hero {
+  background: var(--navy); min-height: 100vh;
+  display: grid; grid-template-columns: 1fr 520px;
+  align-items: stretch; padding-top: var(--nav-h);
+  position: relative; overflow: hidden;
+}
+.hero-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 52px 52px; pointer-events: none;
+}
+.hero-glow {
+  position: absolute; top: -80px; left: -80px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(184,144,42,0.09) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-left {
+  padding: 72px 64px;
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative; z-index: 2;
+}
+.hero-eyebrow {
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); font-weight: 500; margin-bottom: 22px;
+  display: flex; align-items: center; gap: 12px;
+}
+.hero-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
+.hero-h1 {
+  font-family: var(--serif); font-size: clamp(42px,4.5vw,68px);
+  font-weight: 500; color: var(--white); line-height: 1.07;
+  letter-spacing: -0.01em; margin-bottom: 20px;
+}
+.hero-h1 em { font-style: italic; color: var(--gold); }
+.hero-p {
+  font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.8;
+  font-weight: 300; max-width: 500px; margin-bottom: 36px;
+}
+.hero-p strong { color: rgba(255,255,255,0.88); font-weight: 500; }
+.hero-right {
+  background: var(--cream);
+  border-left: 1px solid rgba(184,144,42,0.2);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 48px 40px; position: relative; z-index: 2; overflow-y: auto;
+}
+.hero-logo-wrap {
+  text-align: center; padding-bottom: 24px; margin-bottom: 24px;
+}
+.hero-logo-wrap img {
+  width: 360px; max-width: 92%; height: auto;
+  display: inline-block; mix-blend-mode: multiply;
+}
+.hero-logo-wrap p {
+  font-family: var(--serif); font-size: 13px; font-style: italic;
+  color: rgba(27,48,85,0.45); margin-top: 8px; letter-spacing: 0.04em;
+}
+@media(max-width:1100px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .hero-left { padding: 60px 40px; }
+}
+@media(max-width:768px) {
+  .hero-left { padding: 48px 20px; }
 }
 
 </style>
