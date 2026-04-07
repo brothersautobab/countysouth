@@ -186,7 +186,7 @@ body { font-family: var(--sans); color: var(--navy); background: var(--cream); o
 }
 .hero-p strong { color: rgba(255,255,255,0.88); font-weight: 500; }
 .hero-right {
-  background: var(--white); border-left: 1px solid rgba(184,144,42,0.15);
+  background: var(--cream); border-left: 1px solid rgba(184,144,42,0.15);
   display: flex; flex-direction: column; justify-content: center;
   padding: 48px 40px; position: relative; z-index: 2; overflow-y: auto;
 }
@@ -195,7 +195,7 @@ body { font-family: var(--sans); color: var(--navy); background: var(--cream); o
   border-bottom: 1px solid rgba(27,48,85,0.08); margin-bottom: 24px;
 }
 .hero-logo-wrap img {
-  width: 400px; max-width: 100%; height: auto; display: inline-block;
+  width: 360px; max-width: 92%; height: auto; display: inline-block;
 }
 .hero-logo-wrap p {
   font-family: var(--serif); font-size: 13px; font-style: italic;
@@ -689,7 +689,7 @@ body { font-family: var(--sans); color: var(--navy); background: var(--cream); o
       <ul class="footer-links">
         <li><a href="#">303 Indian Trail Rd. S</a></li>
         <li><a href="#">Indian Trail, NC 28079</a></li>
-        <li><a href="mailto:info@countysouth.biz">info@countysouth.biz</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#741d1a121b34171b011a000d071b01001c5a161d0e"><span class="__cf_email__" data-cfemail="7a13141c153a19150f140e0309150f0e1254181300">[email&#160;protected]</span></a></li>
         <li><a href="#">Facebook</a></li>
         <li><a href="#">Instagram</a></li>
       </ul>
@@ -701,7 +701,7 @@ body { font-family: var(--sans); color: var(--navy); background: var(--cream); o
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const SUPABASE_URL_  = typeof SUPABASE_URL  !== 'undefined' ? SUPABASE_URL  : '';
 const SUPABASE_ANON_ = typeof SUPABASE_ANON !== 'undefined' ? SUPABASE_ANON : '';
 
@@ -784,17 +784,4 @@ function renderListings() {
     return;
   }
   document.getElementById('listingsEmpty').style.display = 'none';
-  const grid = document.getElementById('listingsGrid');
-  grid.innerHTML = filtered.map(buildCard).join('');
-  grid.style.display = 'grid';
-}
-
-function applyFilter() {
-  activeType = document.getElementById('listingTypeFilter').value;
-  renderListings();
-}
-
-loadListings();
-</script>
-</body>
-</html>
+  const grid = document.getElementById('listingsGrid')
