@@ -446,6 +446,25 @@ footer{background:#0F1F38;padding:48px 72px 36px;border-top:1px solid rgba(184,1
 /* Seller-hub: pin left content to top, same as other pages */
 .hero-left { justify-content: flex-start; }
 
+
+/* ── Shared buttons ── */
+.btn-gold {
+  display: inline-block; background: var(--gold); color: var(--white);
+  border: none; padding: 16px 36px; font-family: var(--sans); font-size: 13px;
+  font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase;
+  border-radius: 8px; cursor: pointer; text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+.btn-outline-white {
+  display: inline-block; background: transparent; color: rgba(255,255,255,0.82);
+  border: 1.5px solid rgba(255,255,255,0.28); padding: 15px 34px;
+  font-family: var(--sans); font-size: 13px; font-weight: 400;
+  letter-spacing: 0.07em; text-transform: uppercase; border-radius: 8px;
+  cursor: pointer; text-decoration: none; transition: border-color 0.2s, color 0.2s;
+}
+.btn-outline-white:hover { border-color: var(--gold); color: var(--gold); }
+
 </style>
 </head>
 <body>
