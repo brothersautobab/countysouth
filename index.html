@@ -222,9 +222,9 @@ body { font-family: var(--sans); color: var(--navy); background: var(--cream); o
 .hero-cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
 
 /* Right panel split */
-.hero-right-split { display: flex; flex-direction: column; gap: 16px; height: 100%; justify-content: center; }
+.hero-right-split { display: flex; flex-direction: column; gap: 16px; }
 .split-card {
-  border-radius: 12px; padding: 26px 24px; flex: 1;
+  border-radius: 12px; padding: 26px 24px;
   display: flex; flex-direction: column; gap: 14px;
 }
 .split-card.dark { background: var(--navy); border: 1px solid rgba(184,144,42,0.2); }
@@ -452,10 +452,10 @@ body { font-family: var(--sans); color: var(--navy); background: var(--cream); o
       <div style="display:flex;align-items:center;gap:14px;font-size:15px;color:rgba(255,255,255,.82);font-weight:300;line-height:1.5;"><div style="width:28px;height:28px;border-radius:50%;background:rgba(184,144,42,.12);border:1px solid rgba(184,144,42,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#B8902A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span style="color:rgba(255,255,255,.82);">Ready to sell? We can have qualified buyers in front of you within 30 days.</span></div>
       <div style="display:flex;align-items:center;gap:14px;font-size:15px;color:rgba(255,255,255,.82);font-weight:300;line-height:1.5;"><div style="width:28px;height:28px;border-radius:50%;background:rgba(184,144,42,.12);border:1px solid rgba(184,144,42,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#B8902A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span style="color:rgba(255,255,255,.82);">Buyers and sellers welcome. Browse listings or get a free valuation.</span></div>
     </div>
-    <div style="display:flex;gap:14px;flex-wrap:wrap;">
     <a href="seller-hub.html" class="btn-gold">Get My Free Valuation</a>
-    <a href="#listings" class="btn-outline-white">Browse Listings</a>
-  </div>
+    <p style="margin-top:14px;font-size:13px;color:rgba(255,255,255,.45);font-weight:300;">
+      Looking to buy? <a href="#listings" style="color:var(--gold);text-decoration:none;font-weight:400;">Browse active listings →</a>
+    </p>
   </div>
 
   <div class="hero-right">
