@@ -441,16 +441,9 @@ footer{background:#0F1F38;padding:48px 72px 36px;border-top:1px solid rgba(184,1
 .hero-cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
 
 
-/* ── Seller-hub hero override: form in right panel is tall,
-      so don't stretch left column to match it ── */
-.hero { align-items: flex-start !important; }
-.hero-left { min-height: calc(100vh - var(--nav-h)); justify-content: center; }
-.hero-right {
-  max-height: calc(100vh - var(--nav-h));
-  overflow-y: auto;
-  position: sticky;
-  top: var(--nav-h);
-}
+
+/* Seller-hub: pin left content to top, same as other pages */
+.hero-left { justify-content: flex-start; }
 
 </style>
 </head>
