@@ -214,8 +214,6 @@ body { font-family: var(--sans); color: var(--navy); background: var(--cream); o
 /* ── HOME-SPECIFIC ── */
 
 /* Seller triggers */
-.trigger-row { display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; }
-.trigger-item { display: flex; align-items: center; gap: 14px; font-size: 15px; color: rgba(255,255,255,0.75); font-weight: 300; }
 .trigger-dot {
   width: 30px; height: 30px; border-radius: 50%; flex-shrink: 0;
   background: rgba(184,144,42,0.12); border: 1px solid rgba(184,144,42,0.32);
@@ -409,6 +407,13 @@ body { font-family: var(--sans); color: var(--navy); background: var(--cream); o
   .hero-left { padding: 48px 20px; }
 }
 
+
+/* ── Hero bullet triggers — shared ── */
+.hero-triggers { display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; }
+.trigger { display: flex; align-items: center; gap: 14px; font-size: 15px; color: rgba(255,255,255,0.82); font-weight: 300; line-height: 1.5; }
+.trigger-dot { width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0; background: rgba(184,144,42,0.12); border: 1px solid rgba(184,144,42,0.3); display: flex; align-items: center; justify-content: center; }
+.hero-cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+
 </style>
 </head>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -448,19 +453,10 @@ body { font-family: var(--sans); color: var(--navy); background: var(--cream); o
       Your business could be exactly what one of them is looking for —
       and you'd never have to let anyone know it's for sale until you're ready to close.
     </p>
-    <div class="trigger-row">
-      <div class="trigger-item">
-        <div class="trigger-dot"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#B8902A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
-        Thinking about retiring? Most owners wait too long and leave money behind.
-      </div>
-      <div class="trigger-item">
-        <div class="trigger-dot"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#B8902A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
-        Curious what it's worth? Find out in 90 seconds — no commitment.
-      </div>
-      <div class="trigger-item">
-        <div class="trigger-dot"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#B8902A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
-        Ready to sell? We can have qualified buyers in front of you within 30 days.
-      </div>
+    <div class="hero-triggers">
+      <div class="trigger"><div class="trigger-dot"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#B8902A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Thinking about retiring? Most owners wait too long and leave money behind.</div>
+      <div class="trigger"><div class="trigger-dot"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#B8902A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Curious what it's worth? Find out in 90 seconds — no commitment.</div>
+      <div class="trigger"><div class="trigger-dot"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#B8902A" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>Ready to sell? We can have qualified buyers in front of you within 30 days.</div>
     </div>
     <div class="hero-cta-row">
       <a href="seller-hub.html" class="btn-gold">Get My Free Valuation</a>
